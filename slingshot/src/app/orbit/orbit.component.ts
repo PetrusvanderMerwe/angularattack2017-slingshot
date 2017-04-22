@@ -17,6 +17,7 @@ export class OrbitComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngAfterViewInit() {
     this.babylonService.init(this.renderCanvas.nativeElement);
+    this.babylonService.setupTestScene();
   }
 
   ngOnDestroy() {
