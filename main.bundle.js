@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__(26)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "body\r\n{\r\n    margin:0; \r\n    padding:0;\r\n}\r\n", ""]);
 
 // exports
 
