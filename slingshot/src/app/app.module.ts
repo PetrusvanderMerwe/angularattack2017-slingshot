@@ -3,18 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { SceneService } from './scene.service';
+import { BabylonService } from './babylon.service';
+import { OrbitComponent } from './orbit/orbit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrbitComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [SceneService],
+  providers: [BabylonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
