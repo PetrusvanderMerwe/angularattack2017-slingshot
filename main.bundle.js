@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 128:
+/***/ 129:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 128;
+webpackEmptyContext.id = 129;
 
 
 /***/ }),
 
-/***/ 129:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(144);
 
 
 
@@ -35,7 +35,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 135:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56,8 +56,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(202),
-        styles: [__webpack_require__(197)]
+        template: __webpack_require__(203),
+        styles: [__webpack_require__(198)]
     })
 ], AppComponent);
 
@@ -65,21 +65,21 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 136:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__orbit_orbit_component__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stargaze_stargaze_component__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__orbit_orbit_component__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stargaze_stargaze_component__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__stardata_service__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__startable_startable_component__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stargaze_service__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__orbit_service__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__startable_startable_component__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stargaze_service__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__orbit_service__ = __webpack_require__(83);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -125,7 +125,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 137:
+/***/ 138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -177,7 +177,44 @@ ExoplanetArchiveAPI.FIELD_ELIPTIC_LATITUDE = 'st_elat';
 
 /***/ }),
 
-/***/ 138:
+/***/ 139:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babylonjs__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babylonjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babylonjs__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GazedStar; });
+
+var GazedStar = (function () {
+    function GazedStar(star, renderEngine) {
+        this.DRAWN_DISTANCE = 220;
+        this.BILLBOARD_DIAMETER = 8;
+        this.SPHERE_DIAMETER = 1.5;
+        this.star = star;
+        this.renderEngine = renderEngine;
+        this.computeParameters();
+        this.billboard = this.renderEngine.addBillboard(this.star.StarName, this.BILLBOARD_DIAMETER, this.position, './assets/StarBillboardTexture.png');
+        this.sphere = this.renderEngine.addSphere(this.star.StarName, this.position, this.SPHERE_DIAMETER);
+    }
+    GazedStar.prototype.computeParameters = function () {
+        this.computePosition();
+    };
+    GazedStar.prototype.computePosition = function () {
+        var r = this.DRAWN_DISTANCE;
+        var y = r * Math.sin(this.star.ElipticLatitude);
+        var r2 = r * Math.cos(this.star.ElipticLatitude);
+        var x = r2 * Math.sin(this.star.ElipticLongitude);
+        var z = r2 * Math.cos(this.star.ElipticLongitude);
+        this.position = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](x, y, z);
+    };
+    return GazedStar;
+}());
+
+//# sourceMappingURL=gazedStar.js.map
+
+/***/ }),
+
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -196,12 +233,12 @@ var Star = (function () {
 
 /***/ }),
 
-/***/ 139:
+/***/ 141:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__orbit_service__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__orbit_service__ = __webpack_require__(83);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrbitComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -233,8 +270,8 @@ __decorate([
 OrbitComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-orbit',
-        template: __webpack_require__(203),
-        styles: [__webpack_require__(198)]
+        template: __webpack_require__(204),
+        styles: [__webpack_require__(199)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__orbit_service__["a" /* OrbitService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__orbit_service__["a" /* OrbitService */]) === "function" && _b || Object])
 ], OrbitComponent);
@@ -244,13 +281,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 140:
+/***/ 142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stardata_service__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stargaze_service__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stargaze_service__ = __webpack_require__(84);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StargazeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -269,9 +306,12 @@ var StargazeComponent = (function () {
         this.stargazeService = stargazeService;
         this.stardataService = stardataService;
     }
-    StargazeComponent.prototype.ngOnInit = function () { };
+    StargazeComponent.prototype.ngOnInit = function () {
+        this.stars = this.stardataService.getStars();
+    };
     StargazeComponent.prototype.ngAfterViewInit = function () {
-        this.stargazeService.init(this.renderCanvas.nativeElement);
+        var _this = this;
+        this.stars.subscribe(function (stars) { _this.stargazeService.init(_this.renderCanvas.nativeElement, stars); });
     };
     StargazeComponent.prototype.ngOnDestroy = function () {
     };
@@ -284,8 +324,8 @@ __decorate([
 StargazeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-stargaze',
-        template: __webpack_require__(204),
-        styles: [__webpack_require__(199)]
+        template: __webpack_require__(205),
+        styles: [__webpack_require__(200)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__stargaze_service__["a" /* StargazeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__stargaze_service__["a" /* StargazeService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */]) === "function" && _c || Object])
 ], StargazeComponent);
@@ -295,7 +335,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 141:
+/***/ 143:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -325,8 +365,8 @@ var StartableComponent = (function () {
 StartableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-startable',
-        template: __webpack_require__(205),
-        styles: [__webpack_require__(200)]
+        template: __webpack_require__(206),
+        styles: [__webpack_require__(201)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */]) === "function" && _a || Object])
 ], StartableComponent);
@@ -336,7 +376,7 @@ var _a;
 
 /***/ }),
 
-/***/ 142:
+/***/ 144:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -353,24 +393,6 @@ var environment = {
 
 /***/ }),
 
-/***/ 197:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(26)();
-// imports
-
-
-// module
-exports.push([module.i, "body\r\n{\r\n    margin:0; \r\n    padding:0;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
 /***/ 198:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -379,7 +401,7 @@ exports = module.exports = __webpack_require__(26)();
 
 
 // module
-exports.push([module.i, ".renderCanvas \r\n{\r\n    width: 100%;\r\n    height: 100%;    \r\n}", ""]);
+exports.push([module.i, "body\r\n{\r\n    margin:0; \r\n    padding:0;\r\n}\r\n", ""]);
 
 // exports
 
@@ -415,6 +437,24 @@ exports = module.exports = __webpack_require__(26)();
 
 
 // module
+exports.push([module.i, ".renderCanvas \r\n{\r\n    width: 100%;\r\n    height: 100%;    \r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(26)();
+// imports
+
+
+// module
 exports.push([module.i, "", ""]);
 
 // exports
@@ -425,17 +465,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 202:
-/***/ (function(module, exports) {
-
-module.exports = "<app-orbit></app-orbit>\n"
-
-/***/ }),
-
 /***/ 203:
 /***/ (function(module, exports) {
 
-module.exports = "<canvas #renderCanvas class=\"renderCanvas\"></canvas>"
+module.exports = "<app-stargaze></app-stargaze>\n"
 
 /***/ }),
 
@@ -449,14 +482,21 @@ module.exports = "<canvas #renderCanvas class=\"renderCanvas\"></canvas>"
 /***/ 205:
 /***/ (function(module, exports) {
 
+module.exports = "<canvas #renderCanvas class=\"renderCanvas\"></canvas>"
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, exports) {
+
 module.exports = "<div *ngFor=\"let star of stars |async\">{{star|json}}</div>"
 
 /***/ }),
 
-/***/ 479:
+/***/ 480:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(129);
+module.exports = __webpack_require__(130);
 
 
 /***/ }),
@@ -466,10 +506,10 @@ module.exports = __webpack_require__(129);
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_star__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_ExoplanetArchiveAPI__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_star__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_ExoplanetArchiveAPI__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StardataService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -527,11 +567,11 @@ var _a;
 
 /***/ }),
 
-/***/ 81:
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babylonjs__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babylonjs__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babylonjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babylonjs__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RenderEngine; });
 
@@ -543,27 +583,39 @@ var RenderEngine = (function () {
         this.createScene();
         this.engine.runRenderLoop(function () { _this.scene.render(); });
     }
-    RenderEngine.prototype.setupTestScene = function () {
-        this.createFreeCamera();
-        this.createLight();
-        this.addSphere(new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](0, 0, 100));
-    };
     RenderEngine.prototype.createScene = function () {
         this.scene = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Scene"](this.engine);
         this.scene.clearColor = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Color4"](0, 0, 0, 1);
-    };
-    RenderEngine.prototype.addSphere = function (position) {
-        var sphere = __WEBPACK_IMPORTED_MODULE_0_babylonjs__["MeshBuilder"].CreateSphere('sphere1', { segments: 16, diameter: 2 }, this.scene);
-        sphere.position = position;
-        return sphere;
     };
     RenderEngine.prototype.createFreeCamera = function () {
         this.camera = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["FreeCamera"]('camera1', new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](0, 0, 0), this.scene);
         this.camera.setTarget(new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](0, 0, 1));
         this.camera.attachControl(this.canvas, false);
     };
-    RenderEngine.prototype.createLight = function () {
-        this.hemisphericLight = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["HemisphericLight"]('light1', new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](0, 1, 0), this.scene);
+    RenderEngine.prototype.createHemisphericLight = function () {
+        this.light = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["HemisphericLight"]('hemisphericLight', new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Vector3"](0, 1, 0), this.scene);
+    };
+    RenderEngine.prototype.createPointLight = function (position) {
+        this.light = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["PointLight"]('pointLight', position, this.scene);
+    };
+    RenderEngine.prototype.addBillboard = function (name, size, position, pathToTexture) {
+        // mesh
+        var billboard = __WEBPACK_IMPORTED_MODULE_0_babylonjs__["MeshBuilder"].CreatePlane(name, { size: size }, this.scene);
+        billboard.billboardMode = __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Mesh"].BILLBOARDMODE_ALL;
+        billboard.position = position;
+        // material
+        var material = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["StandardMaterial"](name + "_material", this.scene);
+        material.diffuseTexture = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Texture"](pathToTexture, this.scene);
+        material.opacityTexture = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Texture"](pathToTexture, this.scene);
+        material.specularColor = new __WEBPACK_IMPORTED_MODULE_0_babylonjs__["Color3"](0, 0, 0);
+        material.specularPower = 0;
+        billboard.material = material;
+        return billboard;
+    };
+    RenderEngine.prototype.addSphere = function (name, position, diameter) {
+        var sphere = __WEBPACK_IMPORTED_MODULE_0_babylonjs__["MeshBuilder"].CreateSphere(name, { segments: 16, diameter: diameter, updatable: true }, this.scene);
+        sphere.position = position;
+        return sphere;
     };
     return RenderEngine;
 }());
@@ -572,12 +624,12 @@ var RenderEngine = (function () {
 
 /***/ }),
 
-/***/ 82:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrbitService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -595,7 +647,6 @@ var OrbitService = (function () {
     }
     OrbitService.prototype.init = function (canvas) {
         this.engine = new __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__["a" /* RenderEngine */](canvas);
-        this.engine.setupTestScene();
     };
     return OrbitService;
 }());
@@ -608,12 +659,15 @@ OrbitService = __decorate([
 
 /***/ }),
 
-/***/ 83:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_gazedStar__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babylonjs__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babylonjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babylonjs__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StargazeService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -626,11 +680,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var StargazeService = (function () {
     function StargazeService() {
     }
-    StargazeService.prototype.init = function (canvas) {
+    StargazeService.prototype.init = function (canvas, stars) {
         this.engine = new __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__["a" /* RenderEngine */](canvas);
+        this.setupScene(stars);
+    };
+    StargazeService.prototype.setupScene = function (stars) {
+        var _this = this;
+        this.engine.createFreeCamera();
+        this.engine.createPointLight(new __WEBPACK_IMPORTED_MODULE_3_babylonjs__["Vector3"](0, 0, 0));
+        var gazedStars = [];
+        stars.forEach(function (star) { return gazedStars.push(new __WEBPACK_IMPORTED_MODULE_2__classes_gazedStar__["a" /* GazedStar */](star, _this.engine)); });
+        this.gazedStars = gazedStars;
     };
     return StargazeService;
 }());
@@ -643,5 +708,5 @@ StargazeService = __decorate([
 
 /***/ })
 
-},[479]);
+},[480]);
 //# sourceMappingURL=main.bundle.js.map
