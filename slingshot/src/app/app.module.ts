@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { BabylonService } from './babylon.service';
 import { OrbitComponent } from './orbit/orbit.component';
 import { StargazeComponent } from './stargaze/stargaze.component';
 import { StardataService } from './stardata.service';
 import { StartableComponent } from './startable/startable.component';
+import { StargazeService } from './stargaze.service';
+import { OrbitService } from './orbit.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { StartableComponent } from './startable/startable.component';
     FormsModule,
     HttpModule
   ],
-  providers: [BabylonService, StardataService],
+  providers: [StardataService, StargazeService, OrbitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

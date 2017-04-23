@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { OrbitComponent } from './orbit/orbit.component';
 
 @Component({
   selector: 'app-root',

@@ -1,17 +1,13 @@
-import { Injectable } from '@angular/core';
 import * as BABYLON from 'babylonjs';
 
-@Injectable()
-export class BabylonService {
-    private canvas: HTMLCanvasElement;
+export class RenderEngine {
+    public canvas: HTMLCanvasElement;
     public engine: BABYLON.Engine;
     public scene: BABYLON.Scene;
     public camera: BABYLON.FreeCamera;
     public hemisphericLight: BABYLON.HemisphericLight;    
 
-    constructor() { }
-
-    public init(canvas: HTMLCanvasElement) {
+    constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
         this.engine = new BABYLON.Engine(this.canvas);
         this.createScene();
