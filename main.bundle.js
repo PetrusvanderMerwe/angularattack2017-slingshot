@@ -592,7 +592,7 @@ module.exports = "<div class=\"featchingData\" *ngIf=\"featchingDataVisible\">\r
 /***/ 242:
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"mat-card cardbackground\">\n  <p class=\"heading\">HOST STAR</p>\n  <p class=\"fieldname\">Host name:</p>\n  <p class=\"fielvalue\">{{star.StarName}}</p>\n  <p class=\"fieldname\">Number of planets:</p>\n  <p class=\"fielvalue\">{{star.NumberOfPlanets}}</p>\n  <p class=\"fieldname\">Ecliptic longitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLongitude}}</p>\n  <p class=\"fieldname\">Ecliptic lalitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLatitude}}</p>\n</md-card>"
+module.exports = "<md-card class=\"mat-card cardbackground\">\n  <p class=\"heading\">HOST STAR</p>\n  <p class=\"fieldname\">Host name:</p>\n  <p class=\"fielvalue\">{{star.StarName}}</p>\n  <p class=\"fieldname\">Number of planets:</p>\n  <p class=\"fielvalue\">{{star.NumberOfPlanets}}</p>\n  <p class=\"fieldname\">Ecliptic longitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLongitude}}</p>\n  <p class=\"fieldname\">Ecliptic latitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLatitude}}</p>\n</md-card>"
 
 /***/ }),
 
