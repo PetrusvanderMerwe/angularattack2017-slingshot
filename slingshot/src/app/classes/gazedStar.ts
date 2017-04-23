@@ -9,7 +9,7 @@ export class GazedStar {
     public renderEngine: RenderEngine;
 
     public readonly DRAWN_DISTANCE: number = 100;
-    public readonly DRAWN_DIAMETER: number = 1;
+    public readonly DRAWN_DIAMETER: number = 0.3;
 
     constructor(star: Star, renderEngine: RenderEngine) {
         this.star = star;

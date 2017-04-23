@@ -15,20 +15,9 @@ export class RenderEngine {
         this.engine.runRenderLoop(() => {this.scene.render(); });
     }
 
-    public setupTestScene() {
-        this.createFreeCamera();
-        this.createLight();
-    }
-
     createScene() {
         this.scene = new BABYLON.Scene(this.engine);
         this.scene.clearColor = new BABYLON.Color4(0, 0, 0, 1);
-    }
-
-    addSphere(name: string, position: BABYLON.Vector3, diameter: number): BABYLON.Mesh  {
-        let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere(name, { segments: 16, diameter: diameter }, this.scene);
-        sphere.position = position;
-        return sphere;
     }
 
     createFreeCamera() {
@@ -39,5 +28,11 @@ export class RenderEngine {
 
     createLight() {
         this.hemisphericLight = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), this.scene);
+    }
+
+    addSphere(name: string, position: BABYLON.Vector3, diameter: number): BABYLON.Mesh  {
+        let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere(name, { segments: 16, diameter: diameter }, this.scene);
+        sphere.position = position;
+        return sphere;
     }
 }

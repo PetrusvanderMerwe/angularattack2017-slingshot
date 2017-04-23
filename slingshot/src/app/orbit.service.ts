@@ -9,6 +9,5 @@ export class OrbitService {
 
     public init(canvas: HTMLCanvasElement) {
         this.engine = new RenderEngine(canvas);
-        this.engine.setupTestScene();
     }
 }
