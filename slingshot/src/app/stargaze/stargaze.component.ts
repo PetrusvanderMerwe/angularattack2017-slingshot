@@ -29,4 +29,12 @@ export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy() {
   }
+
+  mousemove(event: MouseEvent) {
+    let pick: BABYLON.PickingInfo = this.stargazeService.engine.scene.pick(event.clientX, event.clientY);
+
+    if (pick.hit) {
+      //console.log('hit: ' + pick.pickedMesh.name);
+    }
+  }
 }
