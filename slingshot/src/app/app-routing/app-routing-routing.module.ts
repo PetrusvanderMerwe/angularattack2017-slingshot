@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { FetchingdataComponent } from '../fetchingdata/fetchingdata.component'
+import { StargazeComponent } from '../stargaze/stargaze.component'
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'fetching',
+    component: FetchingdataComponent
+  },
+  {
+    path: 'stargaze',
+    component: StargazeComponent
+  },
+  { path: '',   redirectTo: '/fetching', pathMatch: 'full' }
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule]
+
 })
 export class AppRoutingRoutingModule { }

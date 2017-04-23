@@ -14,6 +14,7 @@ import { MdButtonModule, MdCheckboxModule, MdProgressBarModule, MdCardModule } f
 import 'hammerjs';
 import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.module';
 import { FetchingdataComponent } from './fetchingdata/fetchingdata.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
