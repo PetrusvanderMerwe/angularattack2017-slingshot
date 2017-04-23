@@ -17,7 +17,7 @@ export class RenderEngine {
     public setupTestScene() {
         this.createFreeCamera();
         this.createLight();
-        this.addSphere();
+        this.addSphere(new BABYLON.Vector3(0, 0, 100));
     }
 
     createScene() {
@@ -25,18 +25,14 @@ export class RenderEngine {
         this.scene.clearColor = new BABYLON.Color4(0, 0, 0, 1);
     }
 
-    addSphere() {
+    addSphere(position: BABYLON.Vector3) {
         let sphere = BABYLON.MeshBuilder.CreateSphere('sphere1', { segments: 16, diameter: 2 }, this.scene);
-        sphere.position.y = 1;
-    }
-
-    addGround() { 
-        let ground = BABYLON.MeshBuilder.CreateGround('ground1', {width: 6, height: 6, subdivisions: 2}, this.scene);
+        sphere.position = position;
     }
 
     createFreeCamera() {
-        this.camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5, -10), this.scene);
-        this.camera.setTarget(BABYLON.Vector3.Zero());
+        this.camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 0, 0), this.scene);
+        this.camera.setTarget(new BABYLON.Vector3(0, 0, 1));
         this.camera.attachControl(this.canvas, false);
     }
 
