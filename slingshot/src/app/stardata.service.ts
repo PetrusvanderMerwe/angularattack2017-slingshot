@@ -14,14 +14,12 @@ export class StardataService {
 
   getStars(): Observable<Star[]> {
     if (this.starsObservable == null) { 
-      //this.http.get(ExoplanetArchiveAPI.BuildStarDataURL()).subscribe(response=>{console.log(response.toString())});
       this.starsObservable = this.http.get(ExoplanetArchiveAPI.BuildStarDataURL()).map(response=>this.mapStarData(response.text()) as Star[]);
     }
     return this.starsObservable;
   }
 
   mapStarData(starData:string): Star[] {
-    console.log('mapping star data: ' + starData);
     return this.splitPipedData(starData).map((row)=>this.mapStarRow(row));
   }
 
@@ -33,7 +31,6 @@ export class StardataService {
     let data:string[][] = [];
 
     let rows:string[] = textData.split('\n');
-    console.log('Number of rows: ' + rows.length)
     rows.forEach((row, index) => { if (index > 0) { data.push(row.split('|')); } });
     if (rows.length > 0) { rows = rows.splice(0, 1); }    
 
