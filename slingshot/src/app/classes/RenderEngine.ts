@@ -25,9 +25,10 @@ export class RenderEngine {
         this.scene.clearColor = new BABYLON.Color4(0, 0, 0, 1);
     }
 
-    addSphere(position: BABYLON.Vector3) {
-        let sphere = BABYLON.MeshBuilder.CreateSphere('sphere1', { segments: 16, diameter: 2 }, this.scene);
+    addSphere(position: BABYLON.Vector3): BABYLON.Mesh  {
+        let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere('sphere1', { segments: 16, diameter: 2 }, this.scene);
         sphere.position = position;
+        return sphere;
     }
 
     createFreeCamera() {
