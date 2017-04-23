@@ -4,18 +4,21 @@ import * as BABYLON from 'babylonjs';
 
 export class GazedStar {
     public star: Star;
-    public mesh: BABYLON.Mesh;
+    public billboard: BABYLON.Mesh;
+    public sphere: BABYLON.Mesh;
     public position: BABYLON.Vector3;
     public renderEngine: RenderEngine;
 
-    public readonly DRAWN_DISTANCE: number = 100;
-    public readonly DRAWN_DIAMETER: number = 0.3;
+    public readonly DRAWN_DISTANCE: number = 200;
+    public readonly BILLBOARD_DIAMETER: number = 8;
+    public readonly SPHERE_DIAMETER: number = 1.5;
 
     constructor(star: Star, renderEngine: RenderEngine) {
         this.star = star;
         this.renderEngine = renderEngine;
         this.computeParameters();
-        this.mesh = this.renderEngine.addSphere(this.star.StarName, this.position, this.DRAWN_DIAMETER);
+        this.billboard = this.renderEngine.addBillboard(this.star.StarName, this.BILLBOARD_DIAMETER, this.position, './assets/StarBillboardTexture.png');
+        this.sphere = this.renderEngine.addSphere(this.star.StarName, this.position, this.SPHERE_DIAMETER);
     }
 
     computeParameters() {
