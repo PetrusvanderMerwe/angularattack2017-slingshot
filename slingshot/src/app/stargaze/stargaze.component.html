@@ -14,4 +14,4 @@
     </md-card>
   </div>
 </div>
-<canvas #renderCanvas class="renderCanvas" (mousemove)="mousemove($event)"></canvas>
+<canvas #renderCanvas class="renderCanvas" (mousemove)="mousemove($event)" (window:resize)="onResize($event)"></canvas>

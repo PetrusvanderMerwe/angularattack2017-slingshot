@@ -45,4 +45,10 @@ export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
       this.stargazeService.updateHoveredStar(event);
     }
   }
+
+  onResize(event) {
+    if (!this.featchingDataVisible) {
+      this.stargazeService.engine.engine.resize();
+    }
+  }
 }
