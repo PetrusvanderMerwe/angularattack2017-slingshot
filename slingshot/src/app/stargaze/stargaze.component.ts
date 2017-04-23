@@ -34,6 +34,8 @@ export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   mousemove(event: MouseEvent) {
-    this.stargazeService.updateHoveredStar(event);
+    if (!this.featchingDataVisible) {
+      this.stargazeService.updateHoveredStar(event);
+    }
   }
 }
