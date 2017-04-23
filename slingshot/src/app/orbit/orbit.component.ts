@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import * as BABYLON from 'babylonjs';
-import { BabylonService } from './../babylon.service'
+import { BabylonService } from './../babylon.service';
 
 @Component({
   selector: 'app-orbit',
