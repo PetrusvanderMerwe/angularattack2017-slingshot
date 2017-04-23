@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 157:
+/***/ 158:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 157;
+webpackEmptyContext.id = 158;
 
 
 /***/ }),
 
-/***/ 158:
+/***/ 159:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(175);
 
 
 
@@ -35,14 +35,14 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 166:
+/***/ 167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fetchingdata_fetchingdata_component__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stargaze_stargaze_component__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fetchingdata_fetchingdata_component__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stargaze_stargaze_component__ = __webpack_require__(94);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -81,7 +81,7 @@ AppRoutingRoutingModule = __decorate([
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,8 +102,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(236),
-        styles: [__webpack_require__(229)]
+        template: __webpack_require__(238),
+        styles: [__webpack_require__(230)]
     })
 ], AppComponent);
 
@@ -111,7 +111,7 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 168:
+/***/ 169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119,19 +119,20 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__orbit_orbit_component__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stargaze_stargaze_component__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stargaze_stargaze_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__stardata_service__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__startable_startable_component__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stargaze_service__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__orbit_service__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_material__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_hammerjs__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__startable_startable_component__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stargaze_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__orbit_service__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_material__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_hammerjs__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_hammerjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_routing_app_routing_routing_module__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__fetchingdata_fetchingdata_component__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_routing_app_routing_routing_module__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__fetchingdata_fetchingdata_component__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__starinfo_starinfo_component__ = __webpack_require__(173);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -139,6 +140,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -168,6 +170,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__stargaze_stargaze_component__["a" /* StargazeComponent */],
             __WEBPACK_IMPORTED_MODULE_8__startable_startable_component__["a" /* StartableComponent */],
             __WEBPACK_IMPORTED_MODULE_15__fetchingdata_fetchingdata_component__["a" /* FetchingdataComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__starinfo_starinfo_component__["a" /* StarinfoComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -189,7 +192,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -243,7 +246,7 @@ ExoplanetArchiveAPI.FIELD_BRIGHTNESS = 'st_wise1';
 
 /***/ }),
 
-/***/ 170:
+/***/ 171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -292,32 +295,12 @@ var GazedStar = (function () {
 
 /***/ }),
 
-/***/ 171:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Star; });
-var Star = (function () {
-    function Star(starName, numberOfPlanets, elipticLongitude, elipticLatitude, brightness) {
-        this.StarName = starName;
-        this.NumberOfPlanets = numberOfPlanets;
-        this.ElipticLongitude = elipticLongitude;
-        this.ElipticLatitude = elipticLatitude;
-        this.Brightness = brightness;
-    }
-    return Star;
-}());
-
-//# sourceMappingURL=star.js.map
-
-/***/ }),
-
 /***/ 172:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__orbit_service__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__orbit_service__ = __webpack_require__(92);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrbitComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -349,8 +332,8 @@ __decorate([
 OrbitComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-orbit',
-        template: __webpack_require__(238),
-        styles: [__webpack_require__(231)]
+        template: __webpack_require__(240),
+        styles: [__webpack_require__(232)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__orbit_service__["a" /* OrbitService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__orbit_service__["a" /* OrbitService */]) === "function" && _b || Object])
 ], OrbitComponent);
@@ -361,6 +344,58 @@ var _a, _b;
 /***/ }),
 
 /***/ 173:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_star__ = __webpack_require__(90);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StarinfoComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StarinfoComponent = (function () {
+    function StarinfoComponent() {
+    }
+    Object.defineProperty(StarinfoComponent.prototype, "starData", {
+        set: function (star) {
+            this.star = star;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    StarinfoComponent.prototype.ngOnInit = function () {
+        this.starData = this.star;
+    };
+    return StarinfoComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Input */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__classes_star__["a" /* Star */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__classes_star__["a" /* Star */]) === "function" && _a || Object),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__classes_star__["a" /* Star */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__classes_star__["a" /* Star */]) === "function" && _b || Object])
+], StarinfoComponent.prototype, "starData", null);
+StarinfoComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+        selector: 'app-starinfo',
+        template: __webpack_require__(242),
+        styles: [__webpack_require__(234)]
+    }),
+    __metadata("design:paramtypes", [])
+], StarinfoComponent);
+
+var _a, _b;
+//# sourceMappingURL=starinfo.component.js.map
+
+/***/ }),
+
+/***/ 174:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -390,8 +425,8 @@ var StartableComponent = (function () {
 StartableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-startable',
-        template: __webpack_require__(240),
-        styles: [__webpack_require__(233)]
+        template: __webpack_require__(243),
+        styles: [__webpack_require__(235)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */]) === "function" && _a || Object])
 ], StartableComponent);
@@ -401,7 +436,7 @@ var _a;
 
 /***/ }),
 
-/***/ 174:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -418,10 +453,10 @@ var environment = {
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)();
+exports = module.exports = __webpack_require__(18)();
 // imports
 
 
@@ -436,15 +471,15 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)();
+exports = module.exports = __webpack_require__(18)();
 // imports
 
 
 // module
-exports.push([module.i, ".maindiv\r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    background-image: url(" + __webpack_require__(490) + ");\r\n}\r\n\r\n.center\r\n{\r\n    position: relative;\r\n    left: 0;\r\n    top: 30%;\r\n}\r\n\r\n.centeredDiv\r\n{\r\n    padding-left: 10%;\r\n    padding-right: 10%;\r\n    text-align: center;\r\n}\r\n\r\n.fecthing\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: italic;\r\n    font-size: 16px;\r\n}\r\n\r\n.heading\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n}\r\n\r\n.creditsdiv\r\n{\r\n    margin-top: 30px;\r\n}\r\n\r\n.credits\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-size: 14px;\r\n}\r\n", ""]);
+exports.push([module.i, ".maindiv\r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    background-image: url(" + __webpack_require__(493) + ");\r\n}\r\n\r\n.center\r\n{\r\n    position: relative;\r\n    left: 0;\r\n    top: 30%;\r\n}\r\n\r\n.centeredDiv\r\n{\r\n    padding-left: 10%;\r\n    padding-right: 10%;\r\n    text-align: center;\r\n}\r\n\r\n.fecthing\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: italic;\r\n    font-size: 16px;\r\n}\r\n\r\n.heading\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n    font-size: 20px;\r\n}\r\n\r\n.creditsdiv\r\n{\r\n    margin-top: 30px;\r\n}\r\n\r\n.credits\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-size: 14px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -454,10 +489,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)();
+exports = module.exports = __webpack_require__(18)();
 // imports
 
 
@@ -472,15 +507,15 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)();
+exports = module.exports = __webpack_require__(18)();
 // imports
 
 
 // module
-exports.push([module.i, ".renderCanvas \r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.featchingData\r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;   \r\n}", ""]);
+exports.push([module.i, ".renderCanvas \r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.featchingData\r\n{\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;   \r\n}\r\n\r\n.dataplaceholder\r\n{\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n    position: absolute;\r\n    z-index: 100;\r\n    top:0px;\r\n    left:0px;\r\n}\r\n\r\n.instructionsPlaceHolder\r\n{\r\n    position: absolute;\r\n    top: 5px;\r\n    width: 100%;\r\n}\r\n\r\n.instructions\r\n{\r\n    margin-left: 30%;\r\n    margin-right: 30%;\r\n    text-align: center;\r\n}\r\n\r\n.heading\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n    font-size: 18px;\r\n    margin: 0px;\r\n    color: white;\r\n}\r\n\r\n.instructionsText\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: italic;\r\n    font-weight: normal;\r\n    font-size: 12px;\r\n    color: white;\r\n    margin: 5px !important;\r\n}\r\n\r\n.explanationText\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 12px;\r\n    color: white;\r\n    margin: 5px !important;\r\n}\r\n\r\n.infocard\r\n{\r\n    padding: 10px !important;\r\n    background-color: rgba(0, 255, 128, 0.6) !important;\r\n}", ""]);
 
 // exports
 
@@ -490,10 +525,28 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 233:
+/***/ 234:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)();
+exports = module.exports = __webpack_require__(18)();
+// imports
+
+
+// module
+exports.push([module.i, ".heading\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: bold;\r\n    font-weight: bold;\r\n    font-size: 14px;\r\n    color: white;\r\n}\r\n\r\n.fieldname\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 12px;   \r\n    color: white;\r\n}\r\n\r\n.fielvalue\r\n{\r\n    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\r\n    font-style: italic;\r\n    font-weight: bold;\r\n    font-size: 12px;\r\n    color: white;\r\n}\r\n\r\n.cardbackground\r\n{\r\n    background-color: rgba(0, 128, 255, 0.6) !important;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 235:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(18)();
 // imports
 
 
@@ -508,35 +561,42 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 236:
+/***/ 238:
 /***/ (function(module, exports) {
 
 module.exports = "<router-outlet></router-outlet>\n<!--<app-fetchingdata></app-fetchingdata>-->\n<!--<app-stargaze></app-stargaze>-->\n<!--<button md-raised-button color=\"primary\">Raised button</button>-->\n"
 
 /***/ }),
 
-/***/ 237:
+/***/ 239:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"maindiv\">\n  <div class=\"center\">\n    <div class=\"centeredDiv\">\n      <md-card class=\"mat-card\">\n        <p class=\"heading\">Exoplanetary Explorer</p>\n        <p class=\"fecthing\">{{messageToDisplay}}</p>\n        <md-progress-bar mode=\"indeterminate\" color=\"#000000\" class=\"mat-progress-bar\"></md-progress-bar>\n        <div class=\"creditsdiv\">\n          <p class=\"credits\">Data obtained via the NASA Exoplanet Archive API: <a href=\"http://exoplanetarchive.ipac.caltech.edu/index.html\" target=\"_blank\">NASA Exoplanet Archives</a></p>          \n        </div>\n      </md-card>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 238:
+/***/ 240:
 /***/ (function(module, exports) {
 
 module.exports = "<canvas #renderCanvas class=\"renderCanvas\"></canvas>"
 
 /***/ }),
 
-/***/ 239:
+/***/ 241:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"featchingData\" *ngIf=\"featchingDataVisible\">\r\n  <app-fetchingdata [displaymessage]=\"'Procesing data, hold on for a short while ...'\" [navigateToStarGaze]=\"false\"></app-fetchingdata>\r\n</div>\r\n<canvas #renderCanvas class=\"renderCanvas\" (mousemove)=\"mousemove($event)\"></canvas>"
+module.exports = "<div class=\"featchingData\" *ngIf=\"featchingDataVisible\">\r\n  <app-fetchingdata [displaymessage]=\"'Procesing data, hold on for a short while ...'\" [navigateToStarGaze]=\"false\"></app-fetchingdata>\r\n</div>\r\n<div class=\"dataplaceholder\" *ngIf=\"displayStarData\">\r\n  <app-starinfo #starInfo [starData]=\"starDataToDisplay\"></app-starinfo>\r\n</div>\r\n<div class=\"instructionsPlaceHolder\" *ngIf=\"!featchingDataVisible\">\r\n  <div class=\"instructions\">\r\n    <md-card class=\"mat-card infocard\">\r\n      <p class=\"heading\">Exoplanetary Explorer</p>\r\n      <p class=\"explanationText\">All the stars with confirmed exoplanets</p>\r\n      <p class=\"instructionsText\">Drag mouse to look around</p>\r\n      <p class=\"instructionsText\">Point at a star to see infomation</p>\r\n    </md-card>\r\n  </div>\r\n</div>\r\n<canvas #renderCanvas class=\"renderCanvas\" (mousemove)=\"mousemove($event)\" (window:resize)=\"onResize($event)\"></canvas>"
 
 /***/ }),
 
-/***/ 240:
+/***/ 242:
+/***/ (function(module, exports) {
+
+module.exports = "<md-card class=\"mat-card cardbackground\">\n  <p class=\"heading\">HOST STAR</p>\n  <p class=\"fieldname\">Host name:</p>\n  <p class=\"fielvalue\">{{star.StarName}}</p>\n  <p class=\"fieldname\">Number of planets:</p>\n  <p class=\"fielvalue\">{{star.NumberOfPlanets}}</p>\n  <p class=\"fieldname\">Ecliptic longitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLongitude}}</p>\n  <p class=\"fieldname\">Ecliptic lalitude:</p>\n  <p class=\"fielvalue\">{{star.ElipticLatitude}}</p>\n</md-card>"
+
+/***/ }),
+
+/***/ 243:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngFor=\"let star of stars |async\">{{star|json}}</div>"
@@ -549,9 +609,9 @@ module.exports = "<div *ngFor=\"let star of stars |async\">{{star|json}}</div>"
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_star__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_ExoplanetArchiveAPI__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_star__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_ExoplanetArchiveAPI__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(245);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StardataService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -630,17 +690,17 @@ var _a;
 
 /***/ }),
 
-/***/ 490:
+/***/ 493:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "starwall.66254883b51ac306ae43.jpg";
 
 /***/ }),
 
-/***/ 492:
+/***/ 495:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(158);
+module.exports = __webpack_require__(159);
 
 
 /***/ }),
@@ -714,6 +774,26 @@ var RenderEngine = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Star; });
+var Star = (function () {
+    function Star(starName, numberOfPlanets, elipticLongitude, elipticLatitude, brightness) {
+        this.StarName = starName;
+        this.NumberOfPlanets = numberOfPlanets;
+        this.ElipticLongitude = elipticLongitude;
+        this.ElipticLatitude = elipticLatitude;
+        this.Brightness = brightness;
+    }
+    return Star;
+}());
+
+//# sourceMappingURL=star.js.map
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stardata_service__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(88);
@@ -757,8 +837,8 @@ __decorate([
 FetchingdataComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-fetchingdata',
-        template: __webpack_require__(237),
-        styles: [__webpack_require__(230)],
+        template: __webpack_require__(239),
+        styles: [__webpack_require__(231)],
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], FetchingdataComponent);
@@ -768,7 +848,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 91:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -803,13 +883,13 @@ OrbitService = __decorate([
 
 /***/ }),
 
-/***/ 92:
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_RenderEngine__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_gazedStar__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_gazedStar__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babylonjs__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babylonjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babylonjs__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StargazeService; });
@@ -889,13 +969,13 @@ StargazeService = __decorate([
 
 /***/ }),
 
-/***/ 93:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stardata_service__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stargaze_service__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stargaze_service__ = __webpack_require__(93);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StargazeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -914,11 +994,18 @@ var StargazeComponent = (function () {
         this.stargazeService = stargazeService;
         this.stardataService = stardataService;
         this.featchingDataVisible = true;
+        this.displayStarData = false;
     }
     StargazeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.stars = this.stardataService.getStars();
         this.stargazeService.sceneReady.subscribe(function (ready) { _this.hideProcessingIndicator(); });
+        this.stargazeService.hoveredStarChanged.subscribe(function (hoveredStar) {
+            if (hoveredStar != null) {
+                _this.starDataToDisplay = _this.stargazeService.hoveredStar.star;
+            }
+            _this.displayStarData = (hoveredStar != null);
+        });
     };
     StargazeComponent.prototype.hideProcessingIndicator = function () {
         this.featchingDataVisible = false;
@@ -930,7 +1017,14 @@ var StargazeComponent = (function () {
     StargazeComponent.prototype.ngOnDestroy = function () {
     };
     StargazeComponent.prototype.mousemove = function (event) {
-        this.stargazeService.updateHoveredStar(event);
+        if (!this.featchingDataVisible) {
+            this.stargazeService.updateHoveredStar(event);
+        }
+    };
+    StargazeComponent.prototype.onResize = function (event) {
+        if (!this.featchingDataVisible) {
+            this.stargazeService.engine.engine.resize();
+        }
     };
     return StargazeComponent;
 }());
@@ -941,8 +1035,8 @@ __decorate([
 StargazeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-stargaze',
-        template: __webpack_require__(239),
-        styles: [__webpack_require__(232)]
+        template: __webpack_require__(241),
+        styles: [__webpack_require__(233)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__stargaze_service__["a" /* StargazeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__stargaze_service__["a" /* StargazeService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stardata_service__["a" /* StardataService */]) === "function" && _c || Object])
 ], StargazeComponent);
@@ -952,5 +1046,5 @@ var _a, _b, _c;
 
 /***/ })
 
-},[492]);
+},[495]);
 //# sourceMappingURL=main.bundle.js.map
