@@ -33,7 +33,7 @@ export class RenderEngine {
         this.light = new BABYLON.PointLight('pointLight', position, this.scene);
     }
 
-    addBillboard(name:string, size: number, position: BABYLON.Vector3, pathToTexture): BABYLON.Mesh {
+    addBillboard(name:string, size: number, position: BABYLON.Vector3, pathToTexture, alpha: number): BABYLON.Mesh {
 
         // mesh
         let billboard:BABYLON.Mesh = BABYLON.MeshBuilder.CreatePlane(name, { size: size }, this.scene);
@@ -44,6 +44,7 @@ export class RenderEngine {
         let material: BABYLON.StandardMaterial = new BABYLON.StandardMaterial(name + "_material", this.scene);
         material.diffuseTexture = new BABYLON.Texture(pathToTexture, this.scene);
         material.opacityTexture = new BABYLON.Texture(pathToTexture, this.scene);
+        material.alpha = alpha;
         material.specularColor = new BABYLON.Color3(0, 0, 0);
         material.specularPower = 0;
         billboard.material = material;
@@ -51,9 +52,19 @@ export class RenderEngine {
         return billboard;
     }
 
-    addSphere(name: string, position: BABYLON.Vector3, diameter: number): BABYLON.Mesh  {
+    addSphere(name: string, position: BABYLON.Vector3, diameter: number, diffuseColor: BABYLON.Color3, alpha: number): BABYLON.Mesh  {
+
+        // mesh
         let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere(name, { segments: 16, diameter: diameter, updatable: true }, this.scene);
         sphere.position = position;
+
+        // material
+        let material: BABYLON.StandardMaterial = new BABYLON.StandardMaterial(name + "_material", this.scene);
+        material.diffuseColor = diffuseColor;
+        material.alpha = alpha;
+        material.specularColor = new BABYLON.Color3(0, 0, 0);
+        sphere.material = material;
+
         return sphere;
     }
 }

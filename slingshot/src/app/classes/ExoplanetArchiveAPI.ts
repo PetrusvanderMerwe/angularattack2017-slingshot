@@ -13,13 +13,15 @@ export class ExoplanetArchiveAPI {
     private static readonly FIELD_NUMBER_OF_PLANETS = 'pl_pnum';
     private static readonly FIELD_ELIPTIC_LONGITUDE = 'st_elon';
     private static readonly FIELD_ELIPTIC_LATITUDE = 'st_elat';
-
+    private static readonly FIELD_BRIGHTNESS = 'st_wise1';
+    
     public static BuildStarDataURL():string {
         return this.BuildApiURL(this.TABLE_CONFIRMED_PLANETS, 
                                 [this.FIELD_STAR_NAME, 
                                  this.FIELD_NUMBER_OF_PLANETS, 
                                  this.FIELD_ELIPTIC_LONGITUDE, 
-                                 this.FIELD_ELIPTIC_LATITUDE], 
+                                 this.FIELD_ELIPTIC_LATITUDE,
+                                 this.FIELD_BRIGHTNESS], 
                                 true);
     }
 

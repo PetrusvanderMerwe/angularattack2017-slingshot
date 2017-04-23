@@ -20,11 +20,34 @@ export class StardataService {
   }
 
   mapStarData(starData:string): Star[] {
-    return this.splitPipedData(starData).map((row)=>this.mapStarRow(row));
+    let stars: Star[] = this.splitPipedData(starData).map((row)=>this.mapStarRow(row));
+    this.normalizeBrightness(stars);
+    return stars;
+  }
+
+  normalizeBrightness(stars: Star[]) {
+    if (stars.length > 0) {
+      let min:number = stars[0].Brightness;
+      let max:number = stars[0].Brightness;
+
+      stars.forEach(star => {
+        let brightness = star.Brightness;
+        if (brightness < min) { min = brightness; }
+        if (brightness > max) { max = brightness; }
+      });
+
+      console.log('min: ' + min);
+      console.log('max: ' + max);
+
+      let delta:number = Math.abs(max-min);
+      stars.forEach(star => {
+        star.Brightness = (!isNaN(star.Brightness) ? ((star.Brightness - min) / delta) : 0);
+      });
+    }
   }
 
   mapStarRow(starRow:string[]): Star {
-    return new Star(starRow[0], Number(starRow[1]), Number(starRow[2]), Number(starRow[3]));
+    return new Star(starRow[0], Number(starRow[1]), Number(starRow[2]), Number(starRow[3]), Number(starRow[4]));
   }
 
   splitPipedData(textData:string): string[][] {

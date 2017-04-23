@@ -12,6 +12,7 @@ import { OrbitService } from './orbit.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import 'hammerjs';
+import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import 'hammerjs';
     HttpModule,
     BrowserAnimationsModule,
     MdButtonModule,
-    MdCheckboxModule
+    MdCheckboxModule,
+    AppRoutingRoutingModule
   ],
   providers: [StardataService, StargazeService, OrbitService],
   bootstrap: [AppComponent]
