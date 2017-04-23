@@ -13,11 +13,17 @@ import { Observable } from 'rxjs';
 export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
   stars: Observable<Star[]>;
   @ViewChild('renderCanvas') renderCanvas:ElementRef;
-
+  featchingDataVisible:boolean = true;
+  
   constructor(private stargazeService:StargazeService, private stardataService:StardataService) { }
 
   ngOnInit() { 
     this.stars = this.stardataService.getStars();
+    this.stargazeService.sceneReady.subscribe(ready => { this.hideProcessingIndicator(); });
+  }
+
+  hideProcessingIndicator() {
+    this.featchingDataVisible = false;
   }
 
   ngAfterViewInit() {

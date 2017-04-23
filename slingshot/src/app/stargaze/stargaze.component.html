@@ -1,1 +1,4 @@
+<div class="featchingData" *ngIf="featchingDataVisible">
+  <app-fetchingdata [displaymessage]="'Procesing data, hold on for a short while ...'" [navigateToStarGaze]="false"></app-fetchingdata>
+</div>
 <canvas #renderCanvas class="renderCanvas" (mousemove)="mousemove($event)"></canvas>

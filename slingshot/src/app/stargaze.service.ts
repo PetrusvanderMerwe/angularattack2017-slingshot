@@ -12,6 +12,7 @@ export class StargazeService {
   hoveredStarName: string;
   hasHoveredStar: boolean;
   hoveredStarChanged: EventEmitter<GazedStar> = new EventEmitter<GazedStar>();
+  sceneReady: EventEmitter<boolean> = new EventEmitter();
 
   constructor() { }
 
@@ -28,6 +29,8 @@ export class StargazeService {
     stars.forEach(star => gazedStars.push(new GazedStar(star, this.engine)));
 
     this.gazedStars = gazedStars;
+
+    this.sceneReady.emit(true);
   }
 
   updateHoveredStar(event: MouseEvent) {
