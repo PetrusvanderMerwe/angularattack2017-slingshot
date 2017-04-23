@@ -22,3 +22,43 @@
     top:0px;
     left:0px;
 }
+
+.instructionsPlaceHolder
+{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+}
+
+.instructions
+{
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+.heading
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+    color: white;
+}
+
+.instructionsText
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    color: white;
+    margin: 5px !important;
+}
+
+.infocard
+{
+    padding: 10px !important;
+    background-color: rgba(0, 255, 128, 0.6) !important;
+}

@@ -2,8 +2,15 @@
   <app-fetchingdata [displaymessage]="'Procesing data, hold on for a short while ...'" [navigateToStarGaze]="false"></app-fetchingdata>
 </div>
 <div class="dataplaceholder" *ngIf="displayStarData">
-  <div class="data">
-     <app-starinfo #starInfo [starData]="starDataToDisplay"></app-starinfo>
+  <app-starinfo #starInfo [starData]="starDataToDisplay"></app-starinfo>
+</div>
+<div class="instructionsPlaceHolder" *ngIf="!featchingDataVisible">
+  <div class="instructions">
+    <md-card class="mat-card infocard">
+      <p class="heading">Exoplanetary Explorer</p>
+      <p class="instructionsText">Drag mouse to look around</p>
+      <p class="instructionsText">Point at a star to see more infomation</p>
+    </md-card>
   </div>
 </div>
 <canvas #renderCanvas class="renderCanvas" (mousemove)="mousemove($event)"></canvas>
