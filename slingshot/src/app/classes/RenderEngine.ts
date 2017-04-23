@@ -1,5 +1,6 @@
 import * as BABYLON from 'babylonjs';
 
+
 export class RenderEngine {
     public canvas: HTMLCanvasElement;
     public engine: BABYLON.Engine;
@@ -17,7 +18,6 @@ export class RenderEngine {
     public setupTestScene() {
         this.createFreeCamera();
         this.createLight();
-        this.addSphere(new BABYLON.Vector3(0, 0, 100));
     }
 
     createScene() {
@@ -25,8 +25,8 @@ export class RenderEngine {
         this.scene.clearColor = new BABYLON.Color4(0, 0, 0, 1);
     }
 
-    addSphere(position: BABYLON.Vector3): BABYLON.Mesh  {
-        let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere('sphere1', { segments: 16, diameter: 2 }, this.scene);
+    addSphere(name: string, position: BABYLON.Vector3, diameter: number): BABYLON.Mesh  {
+        let sphere: BABYLON.Mesh = BABYLON.MeshBuilder.CreateSphere(name, { segments: 16, diameter: diameter }, this.scene);
         sphere.position = position;
         return sphere;
     }

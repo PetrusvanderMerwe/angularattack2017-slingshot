@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef } fr
 import * as BABYLON from 'babylonjs';
 import { StardataService } from './../stardata.service';
 import { StargazeService } from './../stargaze.service';
+import { Star } from "./../classes/star";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-stargaze',
@@ -10,14 +12,19 @@ import { StargazeService } from './../stargaze.service';
 })
 export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
 
+  stars: Observable<Star[]>;
+
+
   @ViewChild('renderCanvas') renderCanvas:ElementRef;
 
   constructor(private stargazeService:StargazeService, private stardataService:StardataService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.stars = this.stardataService.getStars();
+  }
 
   ngAfterViewInit() {
-    this.stargazeService.init(this.renderCanvas.nativeElement);
+    this.stars.subscribe(stars => { this.stargazeService.init(this.renderCanvas.nativeElement, stars); });
   }
 
   ngOnDestroy() {
