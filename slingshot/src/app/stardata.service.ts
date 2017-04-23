@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Star } from "./classes/star";
 import { ExoplanetArchiveAPI } from "./classes/ExoplanetArchiveAPI";
-import { Observable, Observer } from 'rxjs';
+import { Observable  } from 'rxjs';
+import 'rxjs/Rx';
 
 @Injectable()
 export class StardataService {
@@ -12,14 +13,15 @@ export class StardataService {
   constructor(private http: Http) { }
 
   getStars(): Observable<Star[]> {
-    if (this.starsObservable != null) { 
-      return this.starsObservable; 
-    } else {
-      this.starsObservable = this.http.get(ExoplanetArchiveAPI.BuildStarDataURL()).map((response)=>this.mapStarData(response.toString()) as Star[]);
+    if (this.starsObservable == null) { 
+      //this.http.get(ExoplanetArchiveAPI.BuildStarDataURL()).subscribe(response=>{console.log(response.toString())});
+      this.starsObservable = this.http.get(ExoplanetArchiveAPI.BuildStarDataURL()).map(response=>this.mapStarData(response.text()) as Star[]);
     }
+    return this.starsObservable;
   }
 
   mapStarData(starData:string): Star[] {
+    console.log('mapping star data: ' + starData);
     return this.splitPipedData(starData).map((row)=>this.mapStarRow(row));
   }
 
@@ -32,7 +34,7 @@ export class StardataService {
 
     let rows:string[] = textData.split('\n');
     console.log('Number of rows: ' + rows.length)
-    rows.forEach(row => { data.push(row.split('|')); });
+    rows.forEach((row, index) => { if (index > 0) { data.push(row.split('|')); } });
     if (rows.length > 0) { rows = rows.splice(0, 1); }    
 
     return data;

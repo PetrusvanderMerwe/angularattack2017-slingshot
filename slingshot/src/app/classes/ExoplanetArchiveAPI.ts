@@ -1,11 +1,11 @@
 export class ExoplanetArchiveAPI {
-    private static readonly API_BASE_URL = 'http://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI?';
+    private static readonly API_BASE_URL = 'http://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?';
 
     private static readonly ARGUMENT_TABLE = 'table';
     private static readonly ARGUMENT_SELECT = 'select';
     private static readonly ARGUMENT_FORMAT = 'format';
     private static readonly VALUE_PIPED = 'pipe';
-    private static readonly PREDICATE_DISTINCT = 'disctinct';
+    private static readonly PREDICATE_DISTINCT = 'distinct';
 
     private static readonly TABLE_CONFIRMED_PLANETS = 'exoplanets';
 
@@ -32,14 +32,16 @@ export class ExoplanetArchiveAPI {
         url += this.ARGUMENT_TABLE + '=' + table;
 
         // select
-        if (fields.length > 0) { url += this.ARGUMENT_SELECT + ((distinct) ? this.PREDICATE_DISTINCT + ' ': ''); }
-        fields.forEach((field, index) => {
-            if (index > 0) { url += ','; };
-            url += field;
-        });
+        if (fields.length > 0) { 
+            url += '&' + this.ARGUMENT_SELECT + ((distinct) ? '=' + this.PREDICATE_DISTINCT + ' ': ''); 
+            fields.forEach((field, index) => {
+                if (index > 0) { url += ','; };
+                url += field;
+            });
+        }
 
         // format
-        url += this.ARGUMENT_FORMAT + '=' + this.VALUE_PIPED;
+        url += '&' + this.ARGUMENT_FORMAT + '=' + this.VALUE_PIPED;
 
         return url;
     }

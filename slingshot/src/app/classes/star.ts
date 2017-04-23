@@ -8,6 +8,6 @@ export class Star {
         this.StarName = starName;
         this.NumberOfPlanets = numberOfPlanets;
         this.ElipticLongitude = elipticLongitude;
-        this.ElipticLongitude = elipticLatitude;
+        this.ElipticLatitude = elipticLatitude;
     }
 }

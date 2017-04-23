@@ -7,12 +7,14 @@ import { BabylonService } from './babylon.service';
 import { OrbitComponent } from './orbit/orbit.component';
 import { StargazeComponent } from './stargaze/stargaze.component';
 import { StardataService } from './stardata.service';
+import { StartableComponent } from './startable/startable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrbitComponent,
-    StargazeComponent
+    StargazeComponent,
+    StartableComponent
   ],
   imports: [
     BrowserModule,
