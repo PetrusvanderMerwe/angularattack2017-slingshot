@@ -10,9 +10,10 @@ import { StartableComponent } from './startable/startable.component';
 import { StargazeService } from './stargaze.service';
 import { OrbitService } from './orbit.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdProgressBarModule, MdCardModule } from '@angular/material';
 import 'hammerjs';
 import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.module';
+import { FetchingdataComponent } from './fetchingdata/fetchingdata.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.modul
     OrbitComponent,
     StargazeComponent,
     StartableComponent,
+    FetchingdataComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,8 @@ import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.modul
     BrowserAnimationsModule,
     MdButtonModule,
     MdCheckboxModule,
+    MdProgressBarModule, 
+    MdCardModule,
     AppRoutingRoutingModule
   ],
   providers: [StardataService, StargazeService, OrbitService],
