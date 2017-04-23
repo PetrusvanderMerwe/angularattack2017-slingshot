@@ -9,18 +9,24 @@ import { StardataService } from './stardata.service';
 import { StartableComponent } from './startable/startable.component';
 import { StargazeService } from './stargaze.service';
 import { OrbitService } from './orbit.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrbitComponent,
     StargazeComponent,
-    StartableComponent
+    StartableComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdCheckboxModule
   ],
   providers: [StardataService, StargazeService, OrbitService],
   bootstrap: [AppComponent]
