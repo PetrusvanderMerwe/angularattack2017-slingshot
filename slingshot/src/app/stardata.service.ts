@@ -36,9 +36,6 @@ export class StardataService {
         if (brightness > max) { max = brightness; }
       });
 
-      console.log('min: ' + min);
-      console.log('max: ' + max);
-
       let delta:number = Math.abs(max-min);
       stars.forEach(star => {
         star.Brightness = (!isNaN(star.Brightness) ? ((star.Brightness - min) / delta) : 0);

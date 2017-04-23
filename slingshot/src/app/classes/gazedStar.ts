@@ -40,5 +40,13 @@ export class GazedStar {
 
     computeIntensity() {
         this.intensity = this.MINIMUM_INTENSITY + ((this.star.Brightness) * (1 - this.MINIMUM_INTENSITY));
-    }   
+    }
+
+    enlarge() {
+        this.billboard.scaling = new BABYLON.Vector3(3, 3, 3);
+    }
+
+    resetSize() {
+        this.billboard.scaling = new BABYLON.Vector3(1, 1, 1);
+    }
 }

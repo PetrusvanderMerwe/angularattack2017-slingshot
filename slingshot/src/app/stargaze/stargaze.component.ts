@@ -11,10 +11,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./stargaze.component.css']
 })
 export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
-
   stars: Observable<Star[]>;
-
-
   @ViewChild('renderCanvas') renderCanvas:ElementRef;
 
   constructor(private stargazeService:StargazeService, private stardataService:StardataService) { }
@@ -31,10 +28,6 @@ export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   mousemove(event: MouseEvent) {
-    let pick: BABYLON.PickingInfo = this.stargazeService.engine.scene.pick(event.clientX, event.clientY);
-
-    if (pick.hit) {
-      //console.log('hit: ' + pick.pickedMesh.name);
-    }
+    this.stargazeService.updateHoveredStar(event);
   }
 }
