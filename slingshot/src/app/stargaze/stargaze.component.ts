@@ -4,6 +4,7 @@ import { StardataService } from './../stardata.service';
 import { StargazeService } from './../stargaze.service';
 import { Star } from "./../classes/star";
 import { Observable } from 'rxjs';
+import { StarinfoComponent  } from '../starinfo/starinfo.component'
 
 @Component({
   selector: 'app-stargaze',
@@ -14,12 +15,18 @@ export class StargazeComponent implements OnInit, OnDestroy, AfterViewInit {
   stars: Observable<Star[]>;
   @ViewChild('renderCanvas') renderCanvas:ElementRef;
   featchingDataVisible:boolean = true;
+  displayStarData:boolean = false;
+  starDataToDisplay: Star;
   
   constructor(private stargazeService:StargazeService, private stardataService:StardataService) { }
 
   ngOnInit() { 
     this.stars = this.stardataService.getStars();
     this.stargazeService.sceneReady.subscribe(ready => { this.hideProcessingIndicator(); });
+    this.stargazeService.hoveredStarChanged.subscribe(hoveredStar => { 
+      if (hoveredStar != null) { this.starDataToDisplay = this.stargazeService.hoveredStar.star; }
+      this.displayStarData = (hoveredStar != null); 
+    });
   }
 
   hideProcessingIndicator() {

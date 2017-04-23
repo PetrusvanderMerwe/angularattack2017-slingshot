@@ -15,6 +15,7 @@ import 'hammerjs';
 import { AppRoutingRoutingModule } from './app-routing/app-routing-routing.module';
 import { FetchingdataComponent } from './fetchingdata/fetchingdata.component';
 import { RouterModule, Routes } from '@angular/router';
+import { StarinfoComponent } from './starinfo/starinfo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RouterModule, Routes } from '@angular/router';
     StargazeComponent,
     StartableComponent,
     FetchingdataComponent,
+    StarinfoComponent,
   ],
   imports: [
     BrowserModule,

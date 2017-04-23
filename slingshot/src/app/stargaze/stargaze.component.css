@@ -12,3 +12,13 @@
     top: 0px;
     left: 0px;   
 }
+
+.dataplaceholder
+{
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 100;
+    top:0px;
+    left:0px;
+}
