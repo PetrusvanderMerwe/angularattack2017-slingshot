@@ -162,7 +162,7 @@ var ExoplanetArchiveAPI = (function () {
     return ExoplanetArchiveAPI;
 }());
 
-ExoplanetArchiveAPI.API_BASE_URL = 'http://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?';
+ExoplanetArchiveAPI.API_BASE_URL = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?';
 ExoplanetArchiveAPI.ARGUMENT_TABLE = 'table';
 ExoplanetArchiveAPI.ARGUMENT_SELECT = 'select';
 ExoplanetArchiveAPI.ARGUMENT_FORMAT = 'format';
