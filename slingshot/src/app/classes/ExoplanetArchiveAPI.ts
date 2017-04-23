@@ -1,5 +1,5 @@
 export class ExoplanetArchiveAPI {
-    private static readonly API_BASE_URL = 'http://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?';
+    private static readonly API_BASE_URL = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?';
 
     private static readonly ARGUMENT_TABLE = 'table';
     private static readonly ARGUMENT_SELECT = 'select';

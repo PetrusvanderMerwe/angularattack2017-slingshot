@@ -9,7 +9,7 @@ export class GazedStar {
     public position: BABYLON.Vector3;
     public renderEngine: RenderEngine;
 
-    public readonly DRAWN_DISTANCE: number = 200;
+    public readonly DRAWN_DISTANCE: number = 220;
     public readonly BILLBOARD_DIAMETER: number = 8;
     public readonly SPHERE_DIAMETER: number = 1.5;
 
