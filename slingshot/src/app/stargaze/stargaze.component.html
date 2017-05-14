@@ -1,5 +1,5 @@
 <div class="featchingData" *ngIf="featchingDataVisible">
-  <app-fetchingdata [displaymessage]="'Procesing data, hold on for a short while ...'" [navigateToStarGaze]="false"></app-fetchingdata>
+  <app-fetchingdata [displaymessage]="'Processing data, hold on for a short while ...'" [navigateToStarGaze]="false"></app-fetchingdata>
 </div>
 <div class="dataplaceholder" *ngIf="displayStarData">
   <app-starinfo #starInfo [starData]="starDataToDisplay"></app-starinfo>
@@ -10,7 +10,7 @@
       <p class="heading">Exoplanetary Explorer</p>
       <p class="explanationText">All the stars with confirmed exoplanets</p>
       <p class="instructionsText">Drag mouse to look around</p>
-      <p class="instructionsText">Point at a star to see infomation</p>
+      <p class="instructionsText">Point at a star to see information</p>
     </md-card>
   </div>
 </div>
