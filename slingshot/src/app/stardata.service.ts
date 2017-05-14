@@ -44,7 +44,7 @@ export class StardataService {
   }
 
   mapStarRow(starRow:string[]): Star {
-    return new Star(starRow[0], Number(starRow[1]), Number(starRow[2]), Number(starRow[3]), Number(starRow[4]));
+    return new Star(starRow[0], Number(starRow[1]), Number(starRow[2]), Number(starRow[3]), Number(starRow[4]), Number(starRow[4]));
   }
 
   splitPipedData(textData:string): string[][] {

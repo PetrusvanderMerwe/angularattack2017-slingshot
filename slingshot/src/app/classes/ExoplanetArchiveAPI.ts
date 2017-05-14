@@ -14,6 +14,7 @@ export class ExoplanetArchiveAPI {
     private static readonly FIELD_ELIPTIC_LONGITUDE = 'st_elon';
     private static readonly FIELD_ELIPTIC_LATITUDE = 'st_elat';
     private static readonly FIELD_BRIGHTNESS = 'st_wise1';
+    private static readonly FIELD_DISTANCE_PARSECS = 'st_dist';    
     
     public static BuildStarDataURL():string {
         return this.BuildApiURL(this.TABLE_CONFIRMED_PLANETS, 
@@ -21,7 +22,8 @@ export class ExoplanetArchiveAPI {
                                  this.FIELD_NUMBER_OF_PLANETS, 
                                  this.FIELD_ELIPTIC_LONGITUDE, 
                                  this.FIELD_ELIPTIC_LATITUDE,
-                                 this.FIELD_BRIGHTNESS], 
+                                 this.FIELD_BRIGHTNESS,
+                                 this.FIELD_DISTANCE_PARSECS], 
                                 true);
     }
 
