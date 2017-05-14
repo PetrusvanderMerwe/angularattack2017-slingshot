@@ -21,7 +21,7 @@ export class GazedStar {
         this.renderEngine = renderEngine;
         this.computeParameters();
         this.billboard = this.renderEngine.addBillboard(this.star.StarName, this.BILLBOARD_DIAMETER, this.position, this.BILLBOARD_IMAGE_PATH, this.intensity);
-        this.sphere = this.renderEngine.addSphere(this.star.StarName, this.position, this.SPHERE_DIAMETER, new BABYLON.Color3(1, 1, 1), this.intensity);
+        // this.sphere = this.renderEngine.addSphere(this.star.StarName, this.position, this.SPHERE_DIAMETER, new BABYLON.Color3(1, 1, 1), this.intensity);
     }
 
     computeParameters() {
